@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailManager", "EmailManager\EmailManager.csproj", "{B6B76108-E5A4-4558-8724-C21C086E7895}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3F598C32-B14C-4041-AFA9-37F26AB0184B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6B76108-E5A4-4558-8724-C21C086E7895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B76108-E5A4-4558-8724-C21C086E7895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B76108-E5A4-4558-8724-C21C086E7895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B76108-E5A4-4558-8724-C21C086E7895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F598C32-B14C-4041-AFA9-37F26AB0184B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F598C32-B14C-4041-AFA9-37F26AB0184B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F598C32-B14C-4041-AFA9-37F26AB0184B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F598C32-B14C-4041-AFA9-37F26AB0184B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
