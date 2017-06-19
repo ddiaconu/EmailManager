@@ -1,0 +1,75 @@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">EmailManager</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h1>Email Manager</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Welcome to Email Manager</h2>
+        <p>
+            Email Manager is a sample application that
+            demonstrates how to use Entity Framework Core in an
+            ASP.NET Core MVC web application.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Build it from scratch</h2>
+        <p>You can build the application by following the steps in a series of tutorials.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Download it</h2>
+        <p>You can download the completed project from GitHub.</p>
+    </div>
+</div>
+
+
+@section styles
+{
+    <environment names="Development">
+        <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap-theme.css" />
+        <link rel="stylesheet" type="text/css" href="~/css/Site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/css/Site.css" />
+    </environment>
+}
+
+
+@section scripts
+{
+    <environment names="Development">
+        <script type="text/javascript" src="~/lib/angular/angular.js"></script>
+        <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="~/js/Site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/js/Site.js" asp-append-version="true"></script>
+    </environment>
+}
