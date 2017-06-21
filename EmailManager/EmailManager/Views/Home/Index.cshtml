@@ -3,20 +3,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+            <a class="navbar-brand" href="#/">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="login.html">Login</a>
-                </li>
+                <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
-</nav>
+</div>
 
 <div class="brand">Endava Summer Logout</div>
 <div class="address-bar">Powered by Endava</div>
@@ -145,6 +149,7 @@
 {
 <environment names="Development">
     <link type="text/css" rel="stylesheet" href="~/lib/angular/angular-csp.css" />
+    <link type="text/css" rel="stylesheet" href="~/lib/angular-loading-bar/src/loading-bar.css" />
     <link type="text/css" rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-theme.css" />
     <link type="text/css" rel="stylesheet" href="~/css/business-casual.css" />
@@ -152,6 +157,7 @@
 </environment>
 <environment names="Staging,Production">
     <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="~/lib/angular-loading-bar/src/loading-bar.css" />
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
@@ -164,6 +170,8 @@
 {
     <environment names="Development">
         <script type="text/javascript" src="~/lib/angular/angular.js"></script>
+        <script type="text/javascript" src="~/lib/angular-loading-bar/src/loading-bar.js"></script>
+        <script type="text/javascript" src="~/lib/angular-local-storage/dist/angular-local-storage.js"></script>
         <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script type="text/javascript" src="~/js/jquery.js"></script>
@@ -171,6 +179,8 @@
     </environment>
     <environment names="Staging,Production">
         <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="~/lib/angular-loading-bar/src/loading-bar.js"></script>
+        <script type="text/javascript" src="~/lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="~/js/jquery.js"></script>
