@@ -24,12 +24,12 @@ namespace EmailManager.Controllers.Web
 
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public IActionResult Contact()
         {
-            return View();
+            return View("Index");
         }
 
         [HttpPost]
@@ -49,12 +49,12 @@ namespace EmailManager.Controllers.Web
                 ViewBag.UserMessage = "Message Sent";
             }
 
-            return View();
+            return View("Index");
         }
 
         public IActionResult About()
         {
-            return View();
+            return View("Index");
         }
     }
 }

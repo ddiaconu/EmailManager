@@ -65,7 +65,16 @@ namespace EmailManager
             services.AddIdentity<User, IdentityRole>(config =>
             {
                 config.User.RequireUniqueEmail = true;
+                config.Password.RequireDigit = false;
+                config.Password.RequiredLength = 8;
+                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = true;
+                config.Password.RequireLowercase = false;
                 config.Cookies.ApplicationCookie.LoginPath = "/auth/login";
+                config.Cookies.ApplicationCookie.LogoutPath = "/auth/logout";
+                config.Cookies.ApplicationCookie.AccessDeniedPath = "/Account/AccessDenied";
+                config.Cookies.ApplicationCookie.AutomaticAuthenticate = false;
+                config.Cookies.ApplicationCookie.AuthenticationScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 config.Cookies.ApplicationCookie.Events = new CookieAuthenticationEvents()
                 {
                     OnRedirectToLogin = async ctx =>

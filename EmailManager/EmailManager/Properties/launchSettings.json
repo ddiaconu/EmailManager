@@ -11,8 +11,9 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:8081",
+      "launchUrl": "app/index",
       "environmentVariables": {
+        "MailSettings__ToAddress": "diana.diaconu@endava.com",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

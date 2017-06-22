@@ -35,7 +35,7 @@ namespace EmailManager.Controllers.Web
                 var signinResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, false, false);
                 if (signinResult.Succeeded)
                 {
-                    return RedirectToAction("Events", "App");
+                    return RedirectToAction("Index", "App");
                 }
             }
 
