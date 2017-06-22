@@ -1,27 +1,27 @@
 ﻿using EmailManager.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace EmailManager.Data
 {
-    public class DatabaseContext : DbContext
+    public class DatabaseContext : IdentityDbContext<User>
     {
-        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<EnEvent> EnEvents { get; set; }
 
         public DatabaseContext(DbContextOptions options) : base(options)
-        {
+        {            
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {            
             base.OnModelCreating(builder);
+            builder.Entity<EnEvent>();
         }
     }
 }
